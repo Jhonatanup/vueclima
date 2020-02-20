@@ -5,7 +5,7 @@
         <input 
           type="text" 
           class="search-bar" 
-          placeholder="Search..."
+          placeholder="Digite o nome da cidade..."
           v-model="query"
           @keypress="fetchWeather"
         />
@@ -19,6 +19,7 @@
 
         <div class="weather-box">
           <div class="temp">{{ Math.round(weather.main.temp) }}°c</div>
+          <br/>
           <img v-bind:src="'http://openweathermap.org/img/w/'+ weather.weather[0].icon +'.png'" alt="">
           <div class="feels">Sensação termica: {{ weather.main.feels_like }}°C</div>
         </div>
